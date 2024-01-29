@@ -1,6 +1,6 @@
 FROM nginx:alpine
 
-RUN apk update && apk add ruby-dev nginx npm build-base libffi-dev
+RUN apk update && apk add ruby-dev nginx npm build-base libffi-dev python3
 RUN npm install -g grunt-cli && gem install sass
 
 COPY . /usr/share/nginx/html
